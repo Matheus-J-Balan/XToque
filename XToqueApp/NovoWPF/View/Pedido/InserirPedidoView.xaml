@@ -55,10 +55,12 @@
 
             <TextBlock Visibility="Visible" x:Name="produtosBlock" Grid.Column="2" 
                            Grid.Row="3" Text="Produtos disponíveis" HorizontalAlignment="Left" Margin="0 0 10 0" />
+            <TextBlock Visibility="Visible" x:Name="qtdBlock" Grid.Column="2" 
+                           Grid.Row="3" Text="Qtd produtos:" HorizontalAlignment="Center" Margin="0 0 0 0" />
             <TextBlock Visibility="Visible" x:Name="valorBlock" Grid.Column="2" 
-                           Grid.Row="3" Text="Valor(R$):" HorizontalAlignment="Right" Margin="0 0 100 0" />
+                           Grid.Row="3" Text="Valor(R$):" HorizontalAlignment="Right" Margin="0 0 60 0" />
             <ListBox Visibility="Visible" x:Name="produtosPedListBox" Grid.Column="2" HorizontalAlignment="Left" 
-                         Grid.Row="4" Width="300" Height="150" Margin="0 0 30 10">
+                         Grid.Row="4" Width="320" Height="150" Margin="0 0 30 10">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="IsEnabled" Value="False"/>
@@ -66,14 +68,16 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Width="280">
+                        <Grid Width="300">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1.5*" />
+                                <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Text="{Binding Path=NomeProduto}" Grid.Column="0" FontStyle="Normal" FontWeight="Black" />
-                            <TextBlock Text="{Binding Path=Valor, StringFormat=N2}" Grid.Column="1" FontWeight="Black" HorizontalAlignment="Right" />
+                            <TextBlock Text="{Binding Path=QntdProduto}" Grid.Column="1" FontStyle="Normal" FontWeight="Black" />
+                            <TextBlock Text="{Binding Path=Valor, StringFormat=N2}" Grid.Column="2" FontWeight="Black" HorizontalAlignment="Right" />
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
