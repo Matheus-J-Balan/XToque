@@ -91,7 +91,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="expandirPedido" Command="{Binding ExpandirPedido}" Grid.Column="0" Height="30" Width="90" HorizontalAlignment="Left" Content="Expandir Dados" Background="DeepSkyBlue"/>
+                <Button x:Name="expandirPedido" Command="{Binding ExpandirPedido}" Grid.Column="0" Height="30" Width="90" HorizontalAlignment="Left" Content="Expandir Pedido" Background="DeepSkyBlue"/>
 
                 <Button x:Name="btnMarcarEnviado" Command="{Binding MarcarEnviado}" Grid.Column="1" Height="30" Width="90"  HorizontalAlignment="Right" Content="Marcar Enviado" Margin="0 0 10 0" Background="Yellow"/>
                 <Button x:Name="btnMarcarRecebido" Command="{Binding MarcarRecebido}" Grid.Column="2" Height="30" Width="102" HorizontalAlignment="Right" Content="Marcar Recebido" Margin="0 0 10 0" Background="Lime"/>
