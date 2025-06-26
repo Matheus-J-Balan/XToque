@@ -5,8 +5,8 @@
         public ViewModelBase ViewModelAtual { get; }
 
        public MainViewModel()
-        {
+       {
             ViewModelAtual = new TelaProjetoViewModel();
-        }
+       }
     }
 }

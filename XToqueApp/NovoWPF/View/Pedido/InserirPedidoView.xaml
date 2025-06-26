@@ -8,7 +8,7 @@
         xmlns:local2="clr-namespace:NovoWPF.ViewModel"
         xmlns:local3="clr-namespace:NovoWPF.RegraDeNegocio"
         mc:Ignorable="d"
-        Title="Inserir Pedido" Height="500" Width="900" local2:WindowCloser.EnableWindowClosing="True" WindowStartupLocation="CenterScreen">
+        Title="Inserir Pedido" Height="500" Width="1200" local2:WindowCloser.EnableWindowClosing="True" WindowStartupLocation="CenterScreen">
     <Grid>
       <StackPanel>
         <TextBlock FontSize="20" Grid.Column="0" HorizontalAlignment="Left">INSERIR PEDIDO</TextBlock>
@@ -37,15 +37,15 @@
             <TextBlock Visibility="Visible" x:Name="nomePedidoPessoaBlock" Grid.Column="0" Grid.Row="1" Text="Pessoa*" HorizontalAlignment="Right" Margin="0 0 10 0"/>
             <TextBox Visibility="Visible" x:Name="nomePedidoPessoaBox" Grid.Column="1" Grid.Row="1" Background="#eee" IsReadOnly="True" Width="250" HorizontalAlignment="Left" Margin="0 0 30 10"/>
 
-            <TextBlock Visibility="Visible" x:Name="PedProdutosBlock" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Text="Nome do produto*"  Margin="0 0 10 0" />
+            <TextBlock Visibility="Visible" x:Name="PedProdutosBlock" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Text="Nome/Código do produto*"  Margin="0 0 10 0" />
             <TextBox Visibility="Visible" x:Name="PedProdutosBox" CharacterCasing="Upper" Grid.Column="1" Grid.Row="2" Width="200" HorizontalAlignment="Left" Margin="0 0 30 10"/>
             <Button x:Name="IncluirProdutoPedido" Command="{Binding InserirProduto}" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Inserir Produto" Grid.Column="1" Grid.Row="2"
-                        Width="100" Margin="0 0 0 0"/>
+                        Width="100" Margin="0 0 50 0"/>
 
             <TextBlock Visibility="Visible" x:Name="produtosPedidoBlock" Grid.Column="0" 
                            Grid.Row="4" Text="Produtos*" HorizontalAlignment="Right" Margin="0 0 10 0" />
             <ListBox Visibility="Visible" x:Name="produtosListBox" Grid.Column="1" HorizontalAlignment="Left" 
-                         Grid.Row="4" Width="300" Height="150"  Margin="0 0 30 10">
+                         Grid.Row="4" Width="450" Height="150"  Margin="0 0 30 10">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="IsEnabled" Value="False"/>
@@ -53,14 +53,15 @@
                 </ListBox.ItemContainerStyle>
             </ListBox>
 
-            <TextBlock Visibility="Visible" x:Name="produtosBlock" Grid.Column="2" 
+                <TextBlock Visibility="Visible" x:Name="produtosBlock" Grid.Column="2" 
                            Grid.Row="3" Text="Produtos disponíveis" HorizontalAlignment="Left" Margin="0 0 10 0" />
-            <TextBlock Visibility="Visible" x:Name="qtdBlock" Grid.Column="2" 
+                <TextBlock Visibility="Visible" x:Name="qtdBlock" Grid.Column="2" 
                            Grid.Row="3" Text="Qtd produtos:" HorizontalAlignment="Center" Margin="0 0 0 0" />
             <TextBlock Visibility="Visible" x:Name="valorBlock" Grid.Column="2" 
                            Grid.Row="3" Text="Valor(R$):" HorizontalAlignment="Right" Margin="0 0 60 0" />
+            
             <ListBox Visibility="Visible" x:Name="produtosPedListBox" Grid.Column="2" HorizontalAlignment="Left" 
-                         Grid.Row="4" Width="320" Height="150" Margin="0 0 30 10">
+                         Grid.Row="4" Width="450" Height="150" Margin="0 0 30 10">
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
                         <Setter Property="IsEnabled" Value="False"/>
@@ -68,16 +69,18 @@
                 </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid Width="300">
+                        <Grid Width="450">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.5*" />
                                 <ColumnDefinition Width="1.5*" />
                                 <ColumnDefinition Width="0.5*" />
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="{Binding Path=NomeProduto}" Grid.Column="0" FontStyle="Normal" FontWeight="Black" />
-                            <TextBlock Text="{Binding Path=QntdProduto}" Grid.Column="1" FontStyle="Normal" FontWeight="Black" />
-                            <TextBlock Text="{Binding Path=Valor, StringFormat=N2}" Grid.Column="2" FontWeight="Black" HorizontalAlignment="Right" />
+                            <TextBlock Text="{Binding Path=Codigo}" Grid.Column="0" FontStyle="Normal" FontWeight="Black" />
+                            <TextBlock Text="{Binding Path=NomeProduto}" Grid.Column="1" FontStyle="Normal" FontWeight="Black" />
+                            <TextBlock Text="{Binding Path=QntdProduto}" Grid.Column="2" FontStyle="Normal" FontWeight="Black" />
+                            <TextBlock Text="{Binding Path=Valor, StringFormat=N2}" Grid.Column="3" FontWeight="Black" HorizontalAlignment="Right" />
                         </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>

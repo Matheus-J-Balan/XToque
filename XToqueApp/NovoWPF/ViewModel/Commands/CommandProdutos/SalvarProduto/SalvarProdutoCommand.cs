@@ -47,7 +47,7 @@ namespace NovoWPF.ViewModel.Commands
                 telaProjetoViewModel.ExportarXmlProduto(Produtos, ProdutoViewModel.IdProdutoLista);
                 MessageBox.Show($"Produto {CadastroProdutoView.nomeProdutoBox.Text} cadastrado com sucesso");
 
-                CadastroProdutoView.Visibility = Visibility.Collapsed;
+                CadastroProdutoView.Close();
             }
             else
             {

@@ -44,7 +44,7 @@ namespace NovoWPF.ViewModel.Commands
                     PessoaViewModel.IdPessoaLista++;
                     telaProjetoViewModel.ExportarXmlPessoa(Pessoas, PessoaViewModel.IdPessoaLista);
                     MessageBox.Show($"Cliente {CadastroPessoaView.nomePessoaBox.Text} cadastrado com sucesso");
-                    CadastroPessoaView.Visibility = Visibility.Collapsed;
+                    CadastroPessoaView.Close();
                 }
                 else
                 {

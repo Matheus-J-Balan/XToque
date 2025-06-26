@@ -30,7 +30,8 @@ namespace NovoWPF.ViewModel.Commands.CommandPedidos.SalvarPedido
         }
         public override void Execute(object parameter)
         {
-            var dadoProduto = Produtos.IndexOf(Produtos.Where(p => p.NomeProduto == InserirPedidoView.PedProdutosBox.Text.Trim()).FirstOrDefault());
+            var dadoProduto = Produtos.IndexOf(Produtos.Where(p => (p.NomeProduto == InserirPedidoView.PedProdutosBox.Text.Trim() 
+                                                                    || p.Codigo == InserirPedidoView.PedProdutosBox.Text.Trim())).FirstOrDefault());
 
             var qntdProdPed = int.Parse(InserirPedidoView.qntdProdPedBox.Text.Trim());
 
@@ -44,10 +45,11 @@ namespace NovoWPF.ViewModel.Commands.CommandPedidos.SalvarPedido
 
             if (dadoProduto != -1 && InserirPedidoView.PedProdutosBox.Text != "" && InserirPedidoView.qntdProdPedBox.Text != "" && int.Parse(InserirPedidoView.qntdProdPedBox.Text) >= 1)
             {
-                InserirPedidoView.produtosListBox.Items.Add($"{InserirPedidoView.PedProdutosBox.Text.Trim()}  Qntd: {qntdProdPed}   R$ {Produtos[dadoProduto].Valor * qntdProdPed}");
+                InserirPedidoView.produtosListBox.Items.Add($"{ListaProdutos[dadoProduto].Codigo} - {ListaProdutos[dadoProduto].NomeProduto}  Qntd: {qntdProdPed}   R$ {Produtos[dadoProduto].Valor * qntdProdPed}");
 
                 InserirPedidoViewModel.ProdutosPedido.Add(new Produto(Produtos[dadoProduto].IdProduto,
-                                                                      InserirPedidoView.PedProdutosBox.Text.Trim(), 
+                                                                      InserirPedidoView.PedProdutosBox.Text.Trim(),
+                                                                      ListaProdutos[dadoProduto].Codigo,
                                                                       Produtos[dadoProduto].Valor, 
                                                                       int.Parse(InserirPedidoView.qntdProdPedBox.Text.Trim())));
 

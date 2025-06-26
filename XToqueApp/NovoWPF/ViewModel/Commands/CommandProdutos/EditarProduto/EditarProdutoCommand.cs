@@ -54,7 +54,7 @@ namespace NovoWPF.ViewModel.Commands.CommandProdutos.EditarProduto
 
                 MessageBox.Show($"Produto: {CadastroProdutoView.nomeProdutoBox.Text} editado com sucesso");
           
-                CadastroProdutoView.Visibility = Visibility.Collapsed;
+                CadastroProdutoView.Close();
             }
             else
             {

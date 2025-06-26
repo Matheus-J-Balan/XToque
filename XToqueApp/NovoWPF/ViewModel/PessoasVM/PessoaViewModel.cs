@@ -41,10 +41,7 @@ namespace NovoWPF.ViewModel
         public void VerificaIdListaPessoa(ObservableCollection<Pessoa> pessoas)
         {
             if (pessoas.Count < 1)
-                IdPessoaLista = 1;
-            
-        }
-
-        
+                IdPessoaLista = 1;            
+        }                
     }
 }

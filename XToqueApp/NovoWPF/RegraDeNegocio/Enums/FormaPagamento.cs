@@ -4,6 +4,7 @@
     {
         Boleto,
         Cartao,
-        Dinheiro
+        Dinheiro,
+        PIX
     }
 }

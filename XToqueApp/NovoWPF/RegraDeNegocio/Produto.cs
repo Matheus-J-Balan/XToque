@@ -108,10 +108,11 @@ namespace NovoWPF.RegraDeNegocio
             QntdProduto = qntdProduto;
         }
 
-        public Produto(int idProduto, string nomeProduto, double valor, int qntdProduto)
+        public Produto(int idProduto, string nomeProduto, string codigo, double valor, int qntdProduto)
         {
             IdProduto = idProduto;
             NomeProduto = nomeProduto;
+            Codigo = codigo;
             Valor = valor;
             QntdProduto = qntdProduto;
         }

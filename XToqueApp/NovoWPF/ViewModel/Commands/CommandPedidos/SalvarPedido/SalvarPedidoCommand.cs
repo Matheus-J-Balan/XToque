@@ -39,7 +39,7 @@ namespace NovoWPF.ViewModel.Commands.CommandPedidos.SalvarPedido
 
                 foreach (var produto in InserirPedidoViewModel.ProdutosPedido)
                 {
-                    var dadoProduto = Produtos.IndexOf(Produtos.Where(p => p.NomeProduto == produto.NomeProduto).FirstOrDefault());
+                    var dadoProduto = Produtos.IndexOf(Produtos.Where(p => p.IdProduto == produto.IdProduto).FirstOrDefault());
 
                     var qntdProdutoExistente = Produtos[dadoProduto].QntdProduto;
 
@@ -64,7 +64,7 @@ namespace NovoWPF.ViewModel.Commands.CommandPedidos.SalvarPedido
 
                 MessageBox.Show("Cadastro efetuado com sucesso");
 
-                InserirPedidoView.Visibility = Visibility.Collapsed;
+                InserirPedidoView.Close();
             }
             else
             {

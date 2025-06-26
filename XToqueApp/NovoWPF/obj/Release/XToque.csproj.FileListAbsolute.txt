@@ -41,6 +41,7 @@ C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\X
 C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.Properties.Resources.resources
 C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.csproj.GenerateResource.cache
 C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.csproj.CoreCompileInputs.cache
-C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.csproj.CopyComplete
 C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.exe
 C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.pdb
+C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.exe.config
+C:\Users\mathe\OneDrive\Documentos\GitHub\XToque\XToqueApp\NovoWPF\obj\Release\XToque.csproj.Up2Date

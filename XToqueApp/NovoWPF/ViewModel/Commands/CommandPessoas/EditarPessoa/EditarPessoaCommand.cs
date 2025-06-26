@@ -40,7 +40,7 @@ namespace NovoWPF.ViewModel.Commands
 
                     MessageBox.Show($"Pessoa: {CadastroPessoaView.nomePessoaBox.Text} editada com sucesso");
 
-                    CadastroPessoaView.Visibility = Visibility.Collapsed;
+                    CadastroPessoaView.Close();
                     telaProjetoViewModel.ExportarXmlPessoa(Pessoas, PessoaViewModel.IdPessoaLista);
                 }
                 else
