@@ -58,24 +58,6 @@ namespace NovoWPF.ViewModel
             );
             xml.Save("C:\\XToque\\Produtos.xml");
         }
-        
-        public void AtualizarXmlProduto(ObservableCollection<Produto> Produtos)
-        {
-            var xml = new XElement("Produtos",
-                new XElement("IdProdutoLista", IdProdutoLista),
-                from p in Produtos
-                select new XElement("Produto",
-                    new XElement("IdProduto", p.IdProduto),
-                    new XElement("NomeProduto", p.NomeProduto),
-                    new XElement("Codigo", p.Codigo),
-                    new XElement("Quantidade", p.QntdProduto),
-                    new XElement("Valor", p.Valor)
-                )
-            );
-
-            xml.Save("C:\\XToque\\Produtos.xml");
-        }
-
         public void ExportarXmlPessoa(ObservableCollection<Pessoa> Pessoas, int idPessoaLista)
         {
             var xml = new XElement("Pessoas",
@@ -100,6 +82,24 @@ namespace NovoWPF.ViewModel
                 serializador.Serialize(stream, Pedidos);
             }
         }
+        
+        public void AtualizarXmlProduto(ObservableCollection<Produto> Produtos)
+        {
+            var xml = new XElement("Produtos",
+                new XElement("IdProdutoLista", IdProdutoLista),
+                from p in Produtos
+                select new XElement("Produto",
+                    new XElement("IdProduto", p.IdProduto),
+                    new XElement("NomeProduto", p.NomeProduto),
+                    new XElement("Codigo", p.Codigo),
+                    new XElement("Quantidade", p.QntdProduto),
+                    new XElement("Valor", p.Valor)
+                )
+            );
+
+            xml.Save("C:\\XToque\\Produtos.xml");
+        }
+
 
         public void LerXmlProduto(int idProdutoLista, ObservableCollection<Produto> produtos)
         {

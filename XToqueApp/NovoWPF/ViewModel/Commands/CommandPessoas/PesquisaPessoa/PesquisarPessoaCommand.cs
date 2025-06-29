@@ -24,7 +24,8 @@ namespace NovoWPF.ViewModel.Commands
 
         public override void Execute(object parameter)
         {
-            var dadosGrid = Pessoas.Where(g => g.NomePessoa.Contains(PessoaView.txtBoxPesquisaPessoa.Text) || g.CPF.Contains(PessoaView.txtBoxPesquisaPessoa.Text)).ToList();
+            var dadosGrid = Pessoas.Where(g => g.NomePessoa.Contains(PessoaView.txtBoxPesquisaPessoa.Text) 
+                                            || g.CPF.Contains(PessoaView.txtBoxPesquisaPessoa.Text)).ToList();
 
             if (dadosGrid.Count > 0 && PessoaView.txtBoxPesquisaPessoa.Text != "")
                 PessoaView.dataGridPessoa.ItemsSource = dadosGrid;
